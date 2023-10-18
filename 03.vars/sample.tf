@@ -57,7 +57,7 @@ output "fruits_stock_with_price" {
 }
 
 # Variable with data types
-variables = "fruit_with_details" {
+variable = "fruit_with_details" {
     default = {
       apple = {
        stock = 100 #a number
