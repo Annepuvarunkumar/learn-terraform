@@ -8,7 +8,7 @@ output "fruit_name" {
 }
 
 # List of variable
-variables "fruits" {
+variable "fruits" {
     default = [
         "apples",
         "bananas"
@@ -17,7 +17,7 @@ variables "fruits" {
 }
 
 # Map Variables, Plain
-variables "fruits_stocks" {
+variable "fruits_stocks" {
     default = {
         apples = 100
         bananas = 200
@@ -25,7 +25,7 @@ variables "fruits_stocks" {
 }
 
 #Map Variables, Maps of map
-variables "fruits_name_with_stock_price" {
+variable "fruits_name_with_stock_price" {
     default = {
      apples = {
         stock = 100
