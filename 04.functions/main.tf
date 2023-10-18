@@ -16,3 +16,9 @@ variable "fruit_with_stock" {
 output "fruit_with_stock" {
     value = try(var.fruit_with_stock["banana"], 0)
 }
+
+
+output "fruit_with_stock" {
+    value = lookup(var.fruit_with_stock["apple"], "price", 2)
+    //  try(var.fruit_with_stock["apple"].price, 2)
+}
