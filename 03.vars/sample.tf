@@ -10,7 +10,7 @@ output "fruit_name" {
 # List of variable
 variable "fruits" {
     default = [
-        "apples",
+        "apple",
         "bananas"
     ]
     #default = [ "apples" , "bananas" ]  // single line syntax
@@ -38,9 +38,13 @@ variable "fruits_name_with_stock_price" {
   }
 }
 
-#Access a list variable , list index starts with zero
-output "fruits" {
+#Access a list variable , List index starts with zero
+output "fruits_first" {
     value = var.fruits[0]
+}
+
+output "fruits_second" {
+    value = var.fruits[1]
 }
 
 
