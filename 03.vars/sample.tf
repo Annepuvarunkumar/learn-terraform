@@ -1,9 +1,9 @@
 # Plain variables
-variable "fruit name" {
+variable "fruit_name" {
     default = "apple"
 }
 
-output "fruit name" {
+output "fruit_name" {
     value =  "var.fruit_name"
 }
 
