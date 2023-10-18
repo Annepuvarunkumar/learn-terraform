@@ -25,13 +25,13 @@ variable "fruits_stock" {
 }
 
 #Map Variables, Maps of map
-variable "fruits_name_with_stock_price" {
+variable "fruits_stock_with_price" {
     default = {
-     apple = {
+      apple = {
         stock = 100
         price = 3
     }
-     banana = {
+      banana = {
         stock = 400
         price = 1
     }
@@ -51,6 +51,11 @@ output "fruits_second" {
 output "fruits_stock_apple" {
     value = var.fruits_stock["apple"]
 }
+
+output "fruits_stock_with_price" {
+    value = var.fruits_stock_with_price["apple"].stock
+}
+
 
 
 
