@@ -2,7 +2,7 @@
 // other existing things u want to refer then we use data sources
 
 data "aws_ami_ids" "ami" {
-  name_regex       = Centos-8-DevOps-Practice
+  name_regex       = "Centos-*"
   owners           = [973714476881]
 }
 
