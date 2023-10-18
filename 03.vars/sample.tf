@@ -4,7 +4,7 @@ variable "fruit_name" {
 }
 
 output "fruit_name" {
-    value =  "var.fruit_name"
+    value = var.fruit_name
 }
 
 # List of variable
