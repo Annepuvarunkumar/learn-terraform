@@ -1,8 +1,10 @@
-resource "aws_instance" "web" {
+resource "aws_instance" "WEB" {
   ami           = "ami-03265a0778a880afb"
-  instance_type = "t3.micro"
+  instance_type = "t3.small"
 
   tags = {
-    Name = "HelloWorld"
+    Name = "HELLOWORLD"
   }
 }
+
+
