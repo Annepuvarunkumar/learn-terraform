@@ -41,6 +41,7 @@ variable "fruits_stock_with_price" {
 ## Access a list variable , List index starts with zero
 output "fruits_first" {
     value = var.fruits[0]
+    # valu = element{var.fruits, 0}
 }
 
 output "fruits_second" {
