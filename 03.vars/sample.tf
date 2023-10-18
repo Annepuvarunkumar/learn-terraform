@@ -69,12 +69,14 @@ variable "fruit_details" {
 
 # Variable in a combination of any other string then it needs to be with in ${}
 output "fruit_name_1" {
-    value = "Fruit Name = "${var.fruit_name}"
+    value = "Fruit Name = ${var.fruit_name}"
 }
 
 output "fruit_details_apple" {
-    value = "apple stock = ${var.fruit_details["apple"].stock} , apple type = ${var.fruit_details["apple"].type} , apple sale status = ${var.fruit_details["apple"].for_sale}"
+  value = "apple stock = ${var.fruit_details["apple"].stock} , apple type = ${var.fruit_details["apple"].type} , apple sale status = ${var.fruit_details["apple"].for_sale}"
 }
+
+
 
 
 
