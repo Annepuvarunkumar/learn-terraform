@@ -77,8 +77,7 @@ output "fruit_details_apple" {
   value = "apple stock = ${var.fruit_details["apple"].stock} , apple type = ${var.fruit_details["apple"].type} , apple sale status = ${var.fruit_details["apple"].for_sale}"
 }
 
-
-
+# apple stock - is an string and ${var.fruit_details["apple"].stock} - is an variable so it can access only if it is "${}"
 
 
 
