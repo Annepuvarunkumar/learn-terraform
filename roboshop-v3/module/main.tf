@@ -25,7 +25,7 @@ resource "aws_route53_record" "instance" {
 resource "null_resource" "ansible" {
 
 # this used bcuz we are saying to execute this after creation of instance
- depends on = [
+ depends_on = [
     aws_route53_record.record
  ]
 
