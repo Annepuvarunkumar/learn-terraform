@@ -8,9 +8,10 @@ terraform {
 
 
 variable "test" {
-  default = "HELLO"
+  default = "Hello"
 }
 
 output "test" {
   value = var.test
 }
+

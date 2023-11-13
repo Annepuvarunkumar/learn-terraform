@@ -1,1 +1,1 @@
-test = "HELLO FROM DEV"
+test = "Hello from dev"
