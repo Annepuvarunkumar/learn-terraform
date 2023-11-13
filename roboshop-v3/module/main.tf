@@ -18,15 +18,10 @@ resource "aws_route53_record" "instance" {
   records                  = [aws_instance.instance.private_ip]
 }
 
-# after launching the instances if we want to apply an ansible command, for this we need an thing called provisioner.
-# so by this it can go and apply ansible against that node.
-# first it has to create instance and DNS then it need to run this so,for that we need to use one more resource called as null_resource
-
 resource "null_resource" "ansible" {
 
-# this used bcuz we are saying to execute this after creation of instance
  depends_on = [
-    aws_route53_record.record
+    aws_route53_record.instance
  ]
 
  provisioner "local-exec" {
