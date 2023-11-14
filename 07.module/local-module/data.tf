@@ -11,12 +11,16 @@ output "ami" {
 }
 
 resource "aws_instance" "instance" {
-  ami           = "data.aws_ami.ami"
-  instance_type = "var.instance_type"
+  ami                     = data.aws_ami.ami.id
+  instance_type           = var.instance_type
 # 4. We have to use it in the module
-  vpc_security_group_ids = [ "sg-06c4c9ba200d014bf" ]
+  vpc_security_group_ids  = [ "sg-06c4c9ba200d014bf" ]
 
-#1. By this we will get an ami id using that ami id we can launch the instance.
+# By this we will get an ami id using that ami id we can launch the instance.
+
+}
 
 variable "instance_type" {}
-# 3. We have to receive it on the module
+# 3. We have to receive it on the module and also since it is an empty variable the module when calling it up the instance_type
+# will data will be pushed into the module { i.e..,in the file main.tf}
+
