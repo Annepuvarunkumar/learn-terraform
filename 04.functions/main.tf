@@ -19,7 +19,7 @@ output "fruit_with_stock" {
 #  try functions will try to see the variable if its not there then it gives zero in the o/p.
 
 
-output "fruit_with_stock" {
+output "fruit_with_stock_price" {
     value = lookup(var.fruit_with_stock["apple"], "price", 2)
       # this was used in the roboshop-v2 dir (main.tf)
     //  try(var.fruit_with_stock["apple"].price, 2)
