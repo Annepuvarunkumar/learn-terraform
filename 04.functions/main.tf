@@ -21,7 +21,7 @@ output "fruit_with_stock" {
 
 output "fruit_with_stock_price" {
     value = lookup(var.fruit_with_stock["apple"], "price", 2)
-      # this was used in the roboshop-v2 dir (main.tf)
+      # this was used in the roboshop-v2 dir (main.tfvars)
     //  try(var.fruit_with_stock["apple"].price, 2)
 }
 

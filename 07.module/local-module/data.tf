@@ -22,5 +22,5 @@ resource "aws_instance" "instance" {
 
 variable "instance_type" {}
 # 3. We have to receive it on the module and also since it is an empty variable the module when calling it up the instance_type
-# will data will be pushed into the module { i.e..,in the file main.tf}
+# the data will be pushed into the module { i.e..,in the file main.tfvars}
 
