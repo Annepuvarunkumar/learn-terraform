@@ -27,7 +27,7 @@ locals {
   app       = {for k, v in merge(var.vpc["main"]["subnets"]["app"]) :k => v}
   db        = {for k, v in merge(var.vpc["main"]["subnets"]["db"]) :k => v}
 }
-#the locals is the one with these we can merge the loacl variables.
+#the locals is the one with these we can merge the local variables.
 
 output "all_subnets" {
   value = merge(local.public, local.app, local.db)
