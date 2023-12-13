@@ -22,8 +22,6 @@ resource "aws_security_group" "allow_tls" {
   count = length(var.components)
   name  = element(var.components, count.index)
 }
-
-
 # 1. but generally we not prefer the count function bcuz in this function when we change an components value for ex
 # if we add catalogue before the frontend then it renames the frontend to catalogue.
 
